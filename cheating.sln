@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mkdd_cheating_tool", "mkdd_cheating_tool.csproj", "{7B16A7AA-E5E4-45A2-8266-2108A668C9FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B16A7AA-E5E4-45A2-8266-2108A668C9FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B16A7AA-E5E4-45A2-8266-2108A668C9FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B16A7AA-E5E4-45A2-8266-2108A668C9FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B16A7AA-E5E4-45A2-8266-2108A668C9FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92C3D5F2-CAA8-4422-A60C-1E4315312E71}
+	EndGlobalSection
+EndGlobal

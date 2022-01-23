@@ -1,0 +1,10 @@
+C:\Users\sheeh\source\repos\mkdd memcard manager\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\sheeh\source\repos\mkdd memcard manager\bin\Debug\WindowsFormsApp1.exe
+C:\Users\sheeh\source\repos\mkdd memcard manager\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\sheeh\source\repos\mkdd memcard manager\obj\Debug\mkdd_cheating_tool.csprojAssemblyReference.cache
+C:\Users\sheeh\source\repos\mkdd memcard manager\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\sheeh\source\repos\mkdd memcard manager\obj\Debug\mkdd_cheating_tool.csproj.GenerateResource.cache
+C:\Users\sheeh\source\repos\mkdd memcard manager\obj\Debug\mkdd_cheating_tool.csproj.CoreCompileInputs.cache
+C:\Users\sheeh\source\repos\mkdd memcard manager\obj\Debug\WindowsFormsApp1.exe
+C:\Users\sheeh\source\repos\mkdd memcard manager\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\sheeh\source\repos\mkdd memcard manager\obj\Debug\WindowsFormsApp1.MainForm.resources
