@@ -429,10 +429,15 @@ namespace WindowsFormsApp1
         private static String formatTime(String milliseconds)
         {
 
+            if (milliseconds.Length == 0)
+            {
+                return "5B8D7F";
+            }
+            else
+            {
+                return Convert.ToInt32(milliseconds).ToString("x");
 
-            return Convert.ToInt32(milliseconds).ToString("x");
-
-
+            }
 
         }
     

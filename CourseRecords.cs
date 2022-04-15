@@ -115,10 +115,14 @@ namespace WindowsFormsApp1
             if (Values[Index + 2].Length == 0)
             {
                 this.Milliseconds = 5999999;
+            } else
+            {
+                this.Milliseconds = Convert.ToInt32(Values[Index + 2]);
             }
 
             //this.Milliseconds = Convert.ToInt32(Values[Index + 2],16);
-            this.Milliseconds = Convert.ToInt32(Values[Index + 2]);
+ 
+            
         }
 
 
