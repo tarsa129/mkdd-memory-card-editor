@@ -46,6 +46,9 @@ namespace WindowsFormsApp1
             OpenGci.Filter = " MKDD .gci file (*.gci)|*.gci";
             if (OpenGci.ShowDialog() == DialogResult.OK)
             {
+                this.cmbTTCourse.SelectedIndex = 0;
+                this.GPComboBox.SelectedIndex = 0;
+
                 String filePath = OpenGci.FileName;
                 byte[] bytes = File.ReadAllBytes(filePath);
 
@@ -56,18 +59,20 @@ namespace WindowsFormsApp1
                 main_tab.Enabled = false;
                 
 
-                    Array.Copy(bytes, ImageBlock, ImageBlock.Length);
-                    //Console.WriteLine( (bytes.Length).ToString("x"));
-                    Array.Copy(bytes, 0x2040, bytes, 0x0, 0x4000);
-                    this.StoredValues = Crypt.decodeRawBytes(bytes, ref MemoryCard);
-                    FillFormFields(this.StoredValues);
-                    this.FileName = filePath + ".gci";
-                    
-                    savegciAsNTSCJToolStripMenuItem.Enabled = true;
-                    savegciAsPALToolStripMenuItem.Enabled = true;
-                    savegciAsNTSCUToolStripMenuItem.Enabled = true;
-                    savegciToolStripMenuItem.Enabled = true;
-                    main_tab.Enabled = true;
+                Array.Copy(bytes, ImageBlock, ImageBlock.Length);
+                //Console.WriteLine( (bytes.Length).ToString("x"));
+                Array.Copy(bytes, 0x2040, bytes, 0x0, 0x4000);
+                this.StoredValues = Crypt.decodeRawBytes(bytes, ref MemoryCard);
+                FillFormFields(this.StoredValues);
+                this.FileName = filePath + ".gci";
+
+
+
+                savegciAsNTSCJToolStripMenuItem.Enabled = true;
+                savegciAsPALToolStripMenuItem.Enabled = true;
+                savegciAsNTSCUToolStripMenuItem.Enabled = true;
+                savegciToolStripMenuItem.Enabled = true;
+                main_tab.Enabled = true;
 
                 
 
@@ -442,6 +447,7 @@ namespace WindowsFormsApp1
         }
     
         //Methods that deal with user inputs
+        //Edit all the relevant checkboxes
         private void UnlockChanged(object sender, EventArgs e)
         {
             CheckBox[] Karts = new CheckBox[] { chkPK, chkBP, chkPP, chkWR, chkTB, chkBC, chkGF, chkuwuK, chkTK, chkBB, chkBT, chkPW, chkRB };
@@ -498,6 +504,7 @@ namespace WindowsFormsApp1
             
         }  
         private void PBChanged(object sender, KeyEventArgs e){
+            
             String Name = ((TextBox)sender).Name;
 
 
@@ -557,7 +564,7 @@ namespace WindowsFormsApp1
                         }
                         else
                         {
-                            TextBox Box = this.Controls.Find("txtLC3flap1", true).FirstOrDefault() as TextBox;
+                            TextBox Box = this.Controls.Find("txtLCflap1", true).FirstOrDefault() as TextBox;
                             Box.Text = ((TextBox)sender).Text;
                             TimeTrials[TTComboBoxIndex].FromStringArray3lap(Get3lapTimes());
                         }
@@ -592,17 +599,12 @@ namespace WindowsFormsApp1
 
                     
                 }
-                
-
-
-
-
-
 
             }
             //TimeTrials[TTComboBoxIndex].FromStringArray3lap(Get3lapTimes());
-            //TimeTrials[TTComboBoxIndex].FromStringArrayflap(GetflapTimes());
+            //TimeTrials[TTComboBoxIndex].FromStringArrayflap(GetflapTimes()); 
         }
+        //Ensure that tags are limited to 3 characters
         private void TagChanged(object sender, KeyEventArgs e)
         {
             if (((TextBox)sender).Text.Length > 3)
@@ -611,6 +613,7 @@ namespace WindowsFormsApp1
                 ((TextBox)sender).Text = Text.Substring(0, 3);
             }
         }
+        //Edit volume label
         private void tckVolume_Scroll(object sender, EventArgs e)
         {
             lblVolume.Text = "" + tckVolume.Value;
@@ -619,8 +622,11 @@ namespace WindowsFormsApp1
         //emthods that deal with saving .gci files
         private void savegciToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String[] Values = GetFormFields();
+            TimeTrials[TTComboBoxIndex].FromStringArray3lap(Get3lapTimes());
+            TimeTrials[TTComboBoxIndex].FromStringArrayflap(GetflapTimes());
+            GrandPrixs[GPComboBoxIndex].FromStringArray(GetGPTimes());
 
+            String[] Values = GetFormFields();
 
             byte[] NewBlock = Crypt.EncodeString(Values, ref MemoryCard);
             using (BinaryWriter  writer = new BinaryWriter(File.Open(this.FileName, FileMode.Create)))
@@ -970,7 +976,7 @@ namespace WindowsFormsApp1
     
         private String TimetoMS(String Val)
         {
-            Console.WriteLine(Val);
+            // Console.WriteLine(Val);
             if (Val.Length > 0)
             {
                 if (Val.Length == 9)
