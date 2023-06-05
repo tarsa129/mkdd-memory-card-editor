@@ -240,7 +240,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
@@ -1002,8 +1001,8 @@
             "DK Mountain",
             "Bowser\'s Castle",
             "Rainbow Road",
-            "Sherbet Land",
-            "Dry Dry Desert"});
+            "Dry Dry Desert",
+            "Sherbet Land"});
             this.cmbTTCourse.Location = new System.Drawing.Point(37, 56);
             this.cmbTTCourse.Name = "cmbTTCourse";
             this.cmbTTCourse.Size = new System.Drawing.Size(356, 39);
@@ -1381,7 +1380,7 @@
             this.txtLCflap1.Name = "txtLCflap1";
             this.txtLCflap1.Size = new System.Drawing.Size(210, 38);
             this.txtLCflap1.TabIndex = 19;
-            this.txtLCflap1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtLCflap1.Leave += new System.EventHandler(this.PBChanged);
             // 
             // cmbLC3lap32p
             // 
@@ -1557,7 +1556,7 @@
             this.txtLC3lap1.Name = "txtLC3lap1";
             this.txtLC3lap1.Size = new System.Drawing.Size(210, 38);
             this.txtLC3lap1.TabIndex = 18;
-            this.txtLC3lap1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtLC3lap1.Leave += new System.EventHandler(this.PBChanged);
             // 
             // lbl3lap4
             // 
@@ -1871,7 +1870,7 @@
             this.txtRRflap.Name = "txtRRflap";
             this.txtRRflap.Size = new System.Drawing.Size(210, 38);
             this.txtRRflap.TabIndex = 49;
-            this.txtRRflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtRRflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtRR3lap
             // 
@@ -1879,7 +1878,7 @@
             this.txtRR3lap.Name = "txtRR3lap";
             this.txtRR3lap.Size = new System.Drawing.Size(210, 38);
             this.txtRR3lap.TabIndex = 48;
-            this.txtRR3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtRR3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtBCflap
             // 
@@ -1887,7 +1886,7 @@
             this.txtBCflap.Name = "txtBCflap";
             this.txtBCflap.Size = new System.Drawing.Size(210, 38);
             this.txtBCflap.TabIndex = 47;
-            this.txtBCflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtBCflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtBC3lap
             // 
@@ -1895,7 +1894,7 @@
             this.txtBC3lap.Name = "txtBC3lap";
             this.txtBC3lap.Size = new System.Drawing.Size(210, 38);
             this.txtBC3lap.TabIndex = 46;
-            this.txtBC3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtBC3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtDDJflap
             // 
@@ -1903,7 +1902,7 @@
             this.txtDDJflap.Name = "txtDDJflap";
             this.txtDDJflap.Size = new System.Drawing.Size(210, 38);
             this.txtDDJflap.TabIndex = 45;
-            this.txtDDJflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtDDJflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtDDJ3lap
             // 
@@ -1911,7 +1910,7 @@
             this.txtDDJ3lap.Name = "txtDDJ3lap";
             this.txtDDJ3lap.Size = new System.Drawing.Size(210, 38);
             this.txtDDJ3lap.TabIndex = 44;
-            this.txtDDJ3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtDDJ3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtWCflap
             // 
@@ -1919,7 +1918,7 @@
             this.txtWCflap.Name = "txtWCflap";
             this.txtWCflap.Size = new System.Drawing.Size(210, 38);
             this.txtWCflap.TabIndex = 43;
-            this.txtWCflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtWCflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtWC3lap
             // 
@@ -1927,7 +1926,7 @@
             this.txtWC3lap.Name = "txtWC3lap";
             this.txtWC3lap.Size = new System.Drawing.Size(210, 38);
             this.txtWC3lap.TabIndex = 42;
-            this.txtWC3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtWC3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtDKMflap
             // 
@@ -1935,7 +1934,7 @@
             this.txtDKMflap.Name = "txtDKMflap";
             this.txtDKMflap.Size = new System.Drawing.Size(210, 38);
             this.txtDKMflap.TabIndex = 41;
-            this.txtDKMflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtDKMflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtDKM3lap
             // 
@@ -1943,39 +1942,39 @@
             this.txtDKM3lap.Name = "txtDKM3lap";
             this.txtDKM3lap.Size = new System.Drawing.Size(210, 38);
             this.txtDKM3lap.TabIndex = 40;
-            this.txtDKM3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtDKM3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtMuCflap
             // 
-            this.txtMuCflap.Location = new System.Drawing.Point(534, 948);
+            this.txtMuCflap.Location = new System.Drawing.Point(538, 865);
             this.txtMuCflap.Name = "txtMuCflap";
             this.txtMuCflap.Size = new System.Drawing.Size(210, 38);
             this.txtMuCflap.TabIndex = 39;
-            this.txtMuCflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtMuCflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtMuC3lap
             // 
-            this.txtMuC3lap.Location = new System.Drawing.Point(299, 948);
+            this.txtMuC3lap.Location = new System.Drawing.Point(303, 865);
             this.txtMuC3lap.Name = "txtMuC3lap";
             this.txtMuC3lap.Size = new System.Drawing.Size(210, 38);
             this.txtMuC3lap.TabIndex = 38;
-            this.txtMuC3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtMuC3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtYCflap
             // 
-            this.txtYCflap.Location = new System.Drawing.Point(534, 873);
+            this.txtYCflap.Location = new System.Drawing.Point(538, 942);
             this.txtYCflap.Name = "txtYCflap";
             this.txtYCflap.Size = new System.Drawing.Size(210, 38);
             this.txtYCflap.TabIndex = 37;
-            this.txtYCflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtYCflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtYC3lap
             // 
-            this.txtYC3lap.Location = new System.Drawing.Point(299, 873);
+            this.txtYC3lap.Location = new System.Drawing.Point(303, 944);
             this.txtYC3lap.Name = "txtYC3lap";
             this.txtYC3lap.Size = new System.Drawing.Size(210, 38);
             this.txtYC3lap.TabIndex = 36;
-            this.txtYC3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtYC3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtSLflap
             // 
@@ -1983,7 +1982,7 @@
             this.txtSLflap.Name = "txtSLflap";
             this.txtSLflap.Size = new System.Drawing.Size(210, 38);
             this.txtSLflap.TabIndex = 35;
-            this.txtSLflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtSLflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtSL3lap
             // 
@@ -1991,7 +1990,7 @@
             this.txtSL3lap.Name = "txtSL3lap";
             this.txtSL3lap.Size = new System.Drawing.Size(210, 38);
             this.txtSL3lap.TabIndex = 34;
-            this.txtSL3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtSL3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtWSflap
             // 
@@ -1999,7 +1998,7 @@
             this.txtWSflap.Name = "txtWSflap";
             this.txtWSflap.Size = new System.Drawing.Size(210, 38);
             this.txtWSflap.TabIndex = 33;
-            this.txtWSflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtWSflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtWS3lap
             // 
@@ -2007,7 +2006,7 @@
             this.txtWS3lap.Name = "txtWS3lap";
             this.txtWS3lap.Size = new System.Drawing.Size(210, 38);
             this.txtWS3lap.TabIndex = 32;
-            this.txtWS3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtWS3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtDCflap
             // 
@@ -2015,7 +2014,7 @@
             this.txtDCflap.Name = "txtDCflap";
             this.txtDCflap.Size = new System.Drawing.Size(210, 38);
             this.txtDCflap.TabIndex = 31;
-            this.txtDCflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtDCflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtDC3lap
             // 
@@ -2023,7 +2022,7 @@
             this.txtDC3lap.Name = "txtDC3lap";
             this.txtDC3lap.Size = new System.Drawing.Size(210, 38);
             this.txtDC3lap.TabIndex = 30;
-            this.txtDC3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtDC3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtMaCflap
             // 
@@ -2031,7 +2030,7 @@
             this.txtMaCflap.Name = "txtMaCflap";
             this.txtMaCflap.Size = new System.Drawing.Size(210, 38);
             this.txtMaCflap.TabIndex = 29;
-            this.txtMaCflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtMaCflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtMaC3lap
             // 
@@ -2039,7 +2038,7 @@
             this.txtMaC3lap.Name = "txtMaC3lap";
             this.txtMaC3lap.Size = new System.Drawing.Size(210, 38);
             this.txtMaC3lap.TabIndex = 28;
-            this.txtMaC3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtMaC3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtMBflap
             // 
@@ -2047,7 +2046,7 @@
             this.txtMBflap.Name = "txtMBflap";
             this.txtMBflap.Size = new System.Drawing.Size(210, 38);
             this.txtMBflap.TabIndex = 27;
-            this.txtMBflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtMBflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtMB3lap
             // 
@@ -2055,7 +2054,7 @@
             this.txtMB3lap.Name = "txtMB3lap";
             this.txtMB3lap.Size = new System.Drawing.Size(210, 38);
             this.txtMB3lap.TabIndex = 26;
-            this.txtMB3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtMB3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtDDDflap
             // 
@@ -2063,7 +2062,7 @@
             this.txtDDDflap.Name = "txtDDDflap";
             this.txtDDDflap.Size = new System.Drawing.Size(210, 38);
             this.txtDDDflap.TabIndex = 25;
-            this.txtDDDflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtDDDflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtDDD3lap
             // 
@@ -2071,7 +2070,7 @@
             this.txtDDD3lap.Name = "txtDDD3lap";
             this.txtDDD3lap.Size = new System.Drawing.Size(210, 38);
             this.txtDDD3lap.TabIndex = 24;
-            this.txtDDD3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtDDD3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtBPflap
             // 
@@ -2079,7 +2078,7 @@
             this.txtBPflap.Name = "txtBPflap";
             this.txtBPflap.Size = new System.Drawing.Size(210, 38);
             this.txtBPflap.TabIndex = 23;
-            this.txtBPflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtBPflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtBP3lap
             // 
@@ -2087,7 +2086,7 @@
             this.txtBP3lap.Name = "txtBP3lap";
             this.txtBP3lap.Size = new System.Drawing.Size(210, 38);
             this.txtBP3lap.TabIndex = 22;
-            this.txtBP3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtBP3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtPBflap
             // 
@@ -2095,7 +2094,7 @@
             this.txtPBflap.Name = "txtPBflap";
             this.txtPBflap.Size = new System.Drawing.Size(210, 38);
             this.txtPBflap.TabIndex = 21;
-            this.txtPBflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtPBflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtPB3lap
             // 
@@ -2103,7 +2102,7 @@
             this.txtPB3lap.Name = "txtPB3lap";
             this.txtPB3lap.Size = new System.Drawing.Size(210, 38);
             this.txtPB3lap.TabIndex = 20;
-            this.txtPB3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtPB3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtLCflap
             // 
@@ -2111,7 +2110,7 @@
             this.txtLCflap.Name = "txtLCflap";
             this.txtLCflap.Size = new System.Drawing.Size(210, 38);
             this.txtLCflap.TabIndex = 19;
-            this.txtLCflap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtLCflap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // txtLC3lap
             // 
@@ -2119,7 +2118,7 @@
             this.txtLC3lap.Name = "txtLC3lap";
             this.txtLC3lap.Size = new System.Drawing.Size(210, 38);
             this.txtLC3lap.TabIndex = 18;
-            this.txtLC3lap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PBChanged);
+            this.txtLC3lap.Leave += new System.EventHandler(this.PBChanged);
             // 
             // lblFlap
             // 
@@ -2187,7 +2186,7 @@
             // lblMuC
             // 
             this.lblMuC.AutoSize = true;
-            this.lblMuC.Location = new System.Drawing.Point(32, 948);
+            this.lblMuC.Location = new System.Drawing.Point(36, 865);
             this.lblMuC.Name = "lblMuC";
             this.lblMuC.Size = new System.Drawing.Size(204, 32);
             this.lblMuC.TabIndex = 10;
@@ -2196,7 +2195,7 @@
             // lblYC
             // 
             this.lblYC.AutoSize = true;
-            this.lblYC.Location = new System.Drawing.Point(32, 873);
+            this.lblYC.Location = new System.Drawing.Point(35, 948);
             this.lblYC.Name = "lblYC";
             this.lblYC.Size = new System.Drawing.Size(175, 32);
             this.lblYC.TabIndex = 9;

@@ -503,7 +503,7 @@ namespace WindowsFormsApp1
             }
             
         }  
-        private void PBChanged(object sender, KeyEventArgs e){
+        private void PRChanged(object sender, KeyEventArgs e){
             
             String Name = ((TextBox)sender).Name;
 
@@ -1064,6 +1064,111 @@ namespace WindowsFormsApp1
                 FillGPTimes(GrandPrixs[GPComboBoxIndex].ToStringArray());
             }
             
+        }
+
+        private void PBChanged(object sender, EventArgs e)
+        {
+            String Name = ((TextBox)sender).Name;
+
+
+            String[] Abbrev = new string[] { "BP", "PB", "DC", "LC", "MaC", "YC", "MB", "MuC", "WS", "WC", "DDJ", "DKM", "BC", "RR", "DDD", "SL"};
+            //Console.WriteLine(Name);
+            if (Name.Contains("1"))
+            {
+                // you are editing the course itself, meaning that you are guaranteed a match via index
+                // we only want to write upon a valid string, which can be captured with a try except
+
+                Name = Name.Replace("1", "");
+                if (Name.Contains("flap"))
+                {
+                    try
+                    {
+
+                        TextBox Box = this.Controls.Find("txt" + Abbrev[TTComboBoxIndex] + "flap", true).FirstOrDefault() as TextBox;
+                        Box.Text = ((TextBox)sender).Text;
+                        TimeTrials[TTComboBoxIndex].FromStringArrayflap(GetflapTimes());
+                    }
+                    catch
+                    {
+
+                    }
+
+                }
+                else
+                {
+                    try
+                    {
+                        TextBox Box = this.Controls.Find("txt" + Abbrev[TTComboBoxIndex] + "3lap", true).FirstOrDefault() as TextBox;
+                        Box.Text = ((TextBox)sender).Text;
+                        TimeTrials[TTComboBoxIndex].FromStringArray3lap(Get3lapTimes());
+                    }
+                    catch
+                    {
+
+                    }
+
+                }
+
+
+
+            }
+            else
+            {
+                //you are editing the pb thing, meaning that you are NOT guaranteed a match
+                //check for match
+                if (Name.Contains(Abbrev[TTComboBoxIndex]))
+                {
+                    //if the match is found, try to update box and array
+
+
+                    try
+                    {
+                        if (Name.Contains("3lap"))
+                        {
+                            TextBox Box = this.Controls.Find("txtLC3lap1", true).FirstOrDefault() as TextBox;
+                            Box.Text = ((TextBox)sender).Text;
+                            TimeTrials[TTComboBoxIndex].FromStringArrayflap(GetflapTimes());
+                        }
+                        else
+                        {
+                            TextBox Box = this.Controls.Find("txtLCflap1", true).FirstOrDefault() as TextBox;
+                            Box.Text = ((TextBox)sender).Text;
+                            TimeTrials[TTComboBoxIndex].FromStringArray3lap(Get3lapTimes());
+                        }
+
+
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                else
+                {
+                    //create a new function for storing back just the time
+
+                    //find the j
+
+                    for (int i = 0; i < 16; i++)
+                    {
+                        if (Name.Contains(Abbrev[i]))
+                        {
+                            if (Name.Contains("3lap"))
+                            {
+
+                                TimeTrials[i].set3lapTime(TimetoMS(((TextBox)sender).Text));
+                            }
+                            else
+                            {
+                                TimeTrials[i].setFlapTime(TimetoMS(((TextBox)sender).Text));
+                            }
+                        }
+                    }
+
+
+                }
+
+            }
         }
     }
 }
